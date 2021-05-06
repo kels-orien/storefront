@@ -1,0 +1,16 @@
+[
+    {
+      "title": "Snipcart Logo Sticker",
+      "id": "sticker_logo",
+      "description": "Show off your Snipcart support with a logo sticker!",
+      "price": "2.00",
+      "image": "https://res.cloudinary.com/dofiasjpi/image/upload/v1566409024/e-shop/Phones/Galaxy-A70/main.jpg"
+    },
+    {
+      "title": "Snipcart Logo Sticker Pack",
+      "id": "sticker_logo_pack",
+      "description": "Get a pack of 3 Snipcart logo stickers.",
+      "price": "4.00",
+      "image": "https://res.cloudinary.com/dofiasjpi/image/upload/v1566409024/e-shop/Phones/Galaxy-A70/main.jpg"
+    }
+  ]

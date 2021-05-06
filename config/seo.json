@@ -1,0 +1,17 @@
+{
+    "title": "Storefront | Powered by Snipcart",
+    "titleTemplate": "Storefront",
+    "description": "Next.js Commerce -> https://storefront.vercel.app",
+    "openGraph": {
+      "type": "website",
+      "locale": "en_IE",
+      "url": "https://storefront.vercel.app",
+      "site_name": "Next.js Commerce"
+    },
+    "twitter": {
+      "handle": "@kels_orien",
+      "site": "@kels_orien",
+      "cardType": "summary_large_image"
+    }
+  }
+  
