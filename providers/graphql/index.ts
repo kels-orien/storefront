@@ -32,7 +32,7 @@ export const productsQuery = `
 }`
 
 
-export const productQuery = (slug: string) => `
+export const productQuery = (slug: any) => `
 
     query {
         product: getProduct( _id: "${slug}") {
@@ -55,6 +55,24 @@ export const productQuery = (slug: string) => `
     }
 `
 
+export const searchQuery =  (q: any ) => `
+
+  query  {
+    products: getProductList(where: {name: {match: "${q}"}}) {
+      items {
+          _id
+      description
+      image {
+        sourceUrl
+      }
+      name
+      price
+    }
+  }
+}
+
+`
+
 export const productsIdQuery = `
 
         query {
@@ -64,3 +82,4 @@ export const productsIdQuery = `
             }
           }
 }`
+

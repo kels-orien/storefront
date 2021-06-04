@@ -1,8 +1,11 @@
 @tailwind base;
+@import './base.css';
+
+
 @tailwind components;
 @tailwind utilities;
 
-@import './base.css';
+
 
 html,
 body {

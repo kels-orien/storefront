@@ -6,7 +6,6 @@ import type {
 import { ProductView, ProductCard } from '@components/product'
 import { Layout } from '@components/common'
 import TakeShape from '@providers/takeshape'
-import { getImageUrl } from '@takeshape/routing'
 import Error from "next/error";
 import { productQuery, productsIdQuery } from '@providers/graphql'
 
@@ -29,7 +28,7 @@ export default function Slug(props: InferGetStaticPropsType<typeof getStaticProp
         <div className="container mx-auto">
             <ProductCard>
 
-                <ProductView product={product} />
+                <ProductView product={product} key = {product._id} />
 
 
             </ProductCard>
@@ -39,7 +38,7 @@ export default function Slug(props: InferGetStaticPropsType<typeof getStaticProp
 }
 
 
-export async function getStaticProps({ params }: GetStaticPropsContext<{ slug: string }>): Promise<any> {
+export async function getStaticProps({ params }: GetStaticPropsContext<{ slug: string }>){
     const { slug } = params;
     const res = {
         props: {
@@ -61,7 +60,7 @@ export async function getStaticProps({ params }: GetStaticPropsContext<{ slug: s
 }
 
 
-export async function getStaticPaths(): Promise <any> {
+export async function getStaticPaths() {
     let paths = [];
     try {
         const data = await TakeShape.graphql(productsIdQuery);

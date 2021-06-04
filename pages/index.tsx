@@ -1,16 +1,11 @@
 import Error from "next/error"
 import Head from 'next/head'
-import Link from 'next/link'
 import { Layout } from '@components/common'
+import { Thumbnail } from '@components/product'
 import TakeShape from '../providers/takeshape'
 import styles from '@styles/Home.module.css';
-import { getImageUrl } from '@takeshape/routing'
 import type { InferGetStaticPropsType } from 'next'
 import { productsQuery } from '@providers/graphql'
-
-
-
-
 
 
 export default function Home(props: InferGetStaticPropsType<typeof getStaticProps>) {
@@ -26,7 +21,7 @@ export default function Home(props: InferGetStaticPropsType<typeof getStaticProp
   return (
     <div>
       <Head>
-        <title>Snipcart Store</title>
+        <title>Storefront</title>
       </Head>
 
       <div className={styles.grid}>
@@ -35,16 +30,7 @@ export default function Home(props: InferGetStaticPropsType<typeof getStaticProp
         {
           products.map(product => {
             return (
-              <div key={product._id} className={styles.card}>
-                <Link href={`/product/${product._id}`}>
-                  <a>
-                    <img src={product.image.sourceUrl} alt={`Preview of ${product.title}`} />
-                    <h3>{product.title}</h3>
-                    <p className={styles.cardDescription}>{product.name}</p>
-                    <p>${product.price}</p>
-                  </a>
-                </Link>
-              </div>
+              <Thumbnail key={product._id} product={product} />
             );
           })}
       </div>
@@ -53,7 +39,7 @@ export default function Home(props: InferGetStaticPropsType<typeof getStaticProp
   )
 }
 
-export async function getStaticProps(): Promise <any> {
+export async function getStaticProps() {
 
   const res = {
     props: {

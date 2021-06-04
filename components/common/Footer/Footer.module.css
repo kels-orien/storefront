@@ -1,0 +1,7 @@
+.root {
+    @apply mx-auto max-w-8xl px-6 
+}
+
+.bottom {
+    @apply py-12 flex flex-col md:flex-row justify-between items-center space-y-4
+}

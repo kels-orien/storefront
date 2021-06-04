@@ -17,17 +17,17 @@ const Button: FC<ButtonProps> = ({ className, dataItemId, dataItemImage, dataIte
 
 
     return (
-        <div>
-            <button
-                className={cn(s.root, className, s.button)}
-                data-item-id={dataItemId}
-                data-item-image={dataItemImage}
-                data-item-name={dataItemName}
-                data-item-url={`/product/${dataItemUrl}`}
-                data-item-price={dataItemPrice}>
-                    ADD TO CART
-                </button>
-        </div>
+
+        <button
+            className={cn(s.root, className, s.button)}
+            data-item-id={dataItemId}
+            data-item-image={dataItemImage}
+            data-item-name={dataItemName}
+            data-item-url={`/product/${dataItemUrl}`}
+            data-item-price={dataItemPrice}>
+            ADD TO CART
+        </button>
+
     )
 }
 

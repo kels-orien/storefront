@@ -10,6 +10,9 @@
   align-items: flex-start;
   width: 100%;
 }
+.productImage {
+  @apply transform transition-transform duration-500 object-cover scale-120;
+}
 
 .card {
   margin: 1rem;
@@ -22,6 +25,14 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
 }
 
 .card h3 {

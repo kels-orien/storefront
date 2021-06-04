@@ -108,6 +108,10 @@ a {
   animation-name: fadeIn;
 }
 
+.snipcart-modal__container {
+  padding-top: 8rem
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;

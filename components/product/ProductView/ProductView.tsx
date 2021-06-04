@@ -25,7 +25,7 @@ const ProductView: FC <Props> = ({ product }) => {
     return (
         <div className={cn(s.root, 'fit')}>
 
-            <div key={product._id} className={cn(s.productDisplay)}>
+            <div  className={cn(s.productDisplay)}>
 
                 <a>
                     <img src={product.image.sourceUrl} alt={`Preview of ${product.name}`} />
