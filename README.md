@@ -4,11 +4,11 @@ Ecommerce web application (storefront) created using Nextjs(Typescript), Takesha
 ## Pages
 * Index Page (Home Page)
 
-![alt-text](https://github.com/kels-orien/storefront/blob/master/assets/img/home.png)
+![alt-text](https://github.com/kels-orien/storefront/master/assets/img/home.png)
 
 * Product Detail Page
 
-![alt-text](https://github.com/kels-orien/storefront/blob/master/assets/img/product-detail-page.png)
+![alt-text](https://github.com/kels-orien/storefront/assets/img/product-detail-page.png)
 
 
 * Cart Page
